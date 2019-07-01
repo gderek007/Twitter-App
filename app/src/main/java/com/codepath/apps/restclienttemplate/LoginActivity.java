@@ -1,5 +1,6 @@
 package com.codepath.apps.restclienttemplate;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,8 +10,7 @@ import com.codepath.apps.restclienttemplate.models.SampleModel;
 import com.codepath.apps.restclienttemplate.models.SampleModelDao;
 import com.codepath.oauth.OAuthLoginActionBarActivity;
 
-public class LoginActivity extends OAuthLoginActionBarActivity<RestClient> {
-
+public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 	SampleModelDao sampleModelDao;
 	
 	@Override
@@ -21,7 +21,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<RestClient> {
 		final SampleModel sampleModel = new SampleModel();
 		sampleModel.setName("CodePath");
 
-		sampleModelDao = ((RestApplication) getApplicationContext()).getMyDatabase().sampleModelDao();
+		sampleModelDao = ((TwitterApp) getApplicationContext()).getMyDatabase().sampleModelDao();
 
 		AsyncTask.execute(new Runnable() {
 			@Override
@@ -43,8 +43,10 @@ public class LoginActivity extends OAuthLoginActionBarActivity<RestClient> {
 	// i.e Display application "homepage"
 	@Override
 	public void onLoginSuccess() {
-		// Intent i = new Intent(this, PhotosActivity.class);
+		 Intent i = new Intent(this, TimelineActvity.class);
 		// startActivity(i);
+		//Toast.makeText(this, "Success", Toast.LENGTH_LONG).show();
+		startActivity(i);
 	}
 
 	// OAuth authentication flow failed, handle the error
