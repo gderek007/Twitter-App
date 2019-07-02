@@ -328,6 +328,10 @@
         "source": "/Users/derekgar/.gradle/caches/transforms-2/files-2.1/835f9a0eadae4909880c523a4f625aff/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/derekgar/Desktop/Twitter-App/app/build/intermediates/res/merged/debug/layout_item_tweet.xml.flat",
+        "source": "/Users/derekgar/Desktop/Twitter-App/app/src/main/res/layout/item_tweet.xml"
+    },
+    {
         "merged": "/Users/derekgar/Desktop/Twitter-App/app/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
         "source": "/Users/derekgar/.gradle/caches/transforms-2/files-2.1/901bdd48b7b76dcce50340f482644f22/res/drawable/notification_tile_bg.xml"
     },
