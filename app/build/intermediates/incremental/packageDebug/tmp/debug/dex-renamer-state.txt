@@ -1,4 +1,4 @@
-#Tue Jul 02 17:42:50 PDT 2019
+#Wed Jul 03 16:51:02 PDT 2019
 base.0=/Users/derekgar/Desktop/Twitter-App/app/build/intermediates/dex/debug/mergeDexDebug/out
 path.0=classes.dex
 renamed.0=classes.dex

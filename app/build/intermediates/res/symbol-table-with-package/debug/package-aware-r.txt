@@ -636,6 +636,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable ic_compose
 drawable ic_launcher
+drawable images
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -653,6 +654,7 @@ drawable tooltip_frame_light
 id ALT
 id CTRL
 id FUNCTION
+id LoadedImage
 id META
 id SHIFT
 id SYM
@@ -721,6 +723,9 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageButton
+id imageButton2
+id imageButton3
 id info
 id italic
 id item_touch_helper_previous_elevation
@@ -782,6 +787,7 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id swipeContainer
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager

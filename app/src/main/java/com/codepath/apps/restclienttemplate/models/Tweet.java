@@ -1,5 +1,7 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.parceler.Parcel;
@@ -11,7 +13,7 @@ public class Tweet {
     public long uid;
     public User user;
     public String createdAt;
-
+    public String mediaURL;
     //deserialize JSON
     public static Tweet fromJSON(JSONObject jsonObject) throws JSONException{
         Tweet tweet = new Tweet();
@@ -20,6 +22,12 @@ public class Tweet {
         tweet.uid=jsonObject.getLong("id");
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJSON(jsonObject.getJSONObject("user"));
+        try {
+            tweet.mediaURL = jsonObject.getJSONObject("entities").getJSONObject("media").getString("media_url_https");
+        }
+        catch(JSONException e){
+            Log.e("JSON","no media url");
+        }
         return tweet;
 
     }

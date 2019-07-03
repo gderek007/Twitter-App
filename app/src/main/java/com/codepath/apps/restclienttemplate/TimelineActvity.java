@@ -3,6 +3,7 @@ package com.codepath.apps.restclienttemplate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,19 +25,37 @@ import cz.msebera.android.httpclient.Header;
 
 public class TimelineActvity extends AppCompatActivity {
     private TwitterClient client;
+    private SwipeRefreshLayout swipeContainer;
+
     TweetAdapter tweetAdapter;
     ArrayList<Tweet> tweets;
     RecyclerView rvTweets;
     public static final int COMPOSE_TWEET_REQUEST_CODE = 100;
     public static final String RESULT_TWEET= "result_tweet";
-//    public static final String RESULTS_OK = ;
-//    public static final String RESULT_TWEET = ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
         client = TwitterApp.getRestClient(this);
+        //swipe container
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+        //refresh
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // Your code to refresh the list here.
+                // Make sure you call swipeContainer.setRefreshing(false)
+                // once the network request has completed successfully.
+                fetchTimelineAsync(0);
+            }
+        });
+        // Configure the refreshing colors
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
         //find recycler view
         rvTweets= (RecyclerView) findViewById(R.id.rvTwitter);
         //init the array list from this data source
@@ -50,6 +69,43 @@ public class TimelineActvity extends AppCompatActivity {
 
     }
 
+    public void fetchTimelineAsync(int page) {
+        // Send the network request to fetch the updated data
+        // `client` here is an instance of Android Async HTTP
+        // getHomeTimeline is an example endpoint.
+        client.getHomeTimeline(new JsonHttpResponseHandler() {
+            public void onSuccess(JSONArray json) {
+                // Remember to CLEAR OUT old items before appending in the new ones
+                tweetAdapter.clear();
+                ArrayList<Tweet> refresh= new ArrayList<>();
+                // ...the data has come back, add new items to your adapter...
+
+                    for(int i = 0; i < 25; i++){
+                        try{
+                        Tweet tweet = Tweet.fromJSON(json.getJSONObject(i));
+                        refresh.add(tweet);}
+                        catch(JSONException e){
+                            Log.e("json", "asas");
+                    }
+                    tweetAdapter.addAll(refresh);
+                }
+                swipeContainer.setRefreshing(false);
+                    tweetAdapter.addAll(refresh);
+                }
+            public void onFailure(Throwable e) {
+                Log.d("DEBUG", "Fetch timeline error: " + e.toString());
+            }
+
+
+                // Now we call setRefreshing(false) to signal refresh has finished
+
+
+
+
+        });
+    }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode==COMPOSE_TWEET_REQUEST_CODE && resultCode == RESULT_OK){
@@ -57,7 +113,6 @@ public class TimelineActvity extends AppCompatActivity {
             tweets.add(0,resultTweet);
             tweetAdapter.notifyItemInserted(0);
             rvTweets.scrollToPosition(0);
-
         }
     }
 
@@ -74,9 +129,6 @@ public class TimelineActvity extends AppCompatActivity {
                 Intent intent_compose = new Intent(TimelineActvity.this,ComposeActivity.class);
                 startActivityForResult(intent_compose, COMPOSE_TWEET_REQUEST_CODE);
                 return true;
-//            case R.id.miProfile:
-//                showProfileView();
-//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -88,11 +140,13 @@ public class TimelineActvity extends AppCompatActivity {
                 //    Log.d("Twitter Client ",response.toString());
                 //iterate through the Json Array
                 // for each entry deserialize the JSON object
+                //System.out.println(response);
                 for (int i = 0; i < response.length(); i++) {
                     // convert each object to a tweet model
                     // ad that tweet model to our data source
                     // notify the adapater that we changed
                     try {
+                        System.out.println(response.getJSONObject(i));
                         Tweet tweet = Tweet.fromJSON(response.getJSONObject(i));
                         tweets.add(tweet);
                         tweetAdapter.notifyItemInserted(tweets.size() - 1);

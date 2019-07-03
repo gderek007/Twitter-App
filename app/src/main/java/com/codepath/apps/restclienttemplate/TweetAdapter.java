@@ -36,11 +36,14 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
     public void onBindViewHolder( ViewHolder holder, int position) {
         // get the data according to position
         Tweet tweet = mTweets.get(position);
+        //System.out.println(tweet);
         //populate the views according to this data
         holder.tvUsername.setText(tweet.user.name);
         holder.tvBody.setText(tweet.body);
         Glide.with(context).load(tweet.user.profileImageUrl).into(holder.ivProfileImage);
-
+        if (tweet.mediaURL != null) {
+            Glide.with(context).load(tweet.mediaURL).into(holder.LoadedImage);
+        }
     }
 
     @Override
@@ -53,13 +56,25 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
         public ImageView ivProfileImage;
         public TextView tvUsername;
         public TextView tvBody;
+        public ImageView LoadedImage;
         public ViewHolder(View itemView) {
             super(itemView);
             // perform findViewById lookups
             ivProfileImage = (ImageView) itemView.findViewById(R.id.ivProfileImage);
+            LoadedImage = (ImageView) itemView.findViewById(R.id.LoadedImage);
             tvUsername = (TextView) itemView.findViewById(R.id.tvUserName);
             tvBody = (TextView) itemView.findViewById(R.id.tvBody);
 
         }
+    }
+    public void clear() {
+        mTweets.clear();
+        notifyDataSetChanged();
+    }
+
+    // Add a list of items -- change to type used
+    public void addAll(List<Tweet> list) {
+        mTweets.addAll(list);
+        notifyDataSetChanged();
     }
 }
