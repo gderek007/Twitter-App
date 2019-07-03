@@ -32,7 +32,8 @@ android {
 
 dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    implementation 'org.parceler:parceler-api:1.1.12'
+    annotationProcessor 'org.parceler:parceler:1.1.12'
     implementation fileTree(dir: 'libs', include: '*.jar')
     implementation 'com.codepath.libraries:android-oauth-handler:1.4.0'
     implementation 'commons-codec:commons-codec:1.10'

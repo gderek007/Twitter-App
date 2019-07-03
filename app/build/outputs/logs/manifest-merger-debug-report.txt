@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:2:1-11:12
 MERGED from [com.codepath.libraries:android-oauth-handler:1.4.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/a68c52b2d842e174dea594cf791ba10f/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/835f9a0eadae4909880c523a4f625aff/AndroidManifest.xml:17:1-22:12
@@ -39,9 +39,9 @@ MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/derekgar/.
 MERGED from [com.android.support:print:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/eb0c26d2156c3e8eef12c5d5076582fa/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/912ecb9ecc15560e47ae838a959e01d1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/4ab836584d44737b9d9883642dd54631/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml
@@ -65,7 +65,7 @@ ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:
 	android:name
 		ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:10:5-41:19
+ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:10:5-44:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/6aa8f32bdf680746a01321cb0be42bd7/AndroidManifest.xml:11:5-20
@@ -130,6 +130,10 @@ activity#com.codepath.apps.restclienttemplate.TimelineActvity
 ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:38:9-40:20
 	android:name
 		ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:38:19-50
+activity#com.codepath.apps.restclienttemplate.ComposeActivity
+ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:41:9-43:20
+	android:name
+		ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:41:19-50
 uses-sdk
 INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml

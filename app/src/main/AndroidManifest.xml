@@ -38,6 +38,9 @@
         <activity android:name=".TimelineActvity">
 
         </activity>
+        <activity android:name=".ComposeActivity">
+
+        </activity>
     </application>
 
 </manifest>
