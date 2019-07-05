@@ -48,6 +48,7 @@ public class TimelineActvity extends AppCompatActivity {
                 // Make sure you call swipeContainer.setRefreshing(false)
                 // once the network request has completed successfully.
                 fetchTimelineAsync(0);
+
             }
         });
         // Configure the refreshing colors
@@ -55,7 +56,6 @@ public class TimelineActvity extends AppCompatActivity {
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
-
         //find recycler view
         rvTweets= (RecyclerView) findViewById(R.id.rvTwitter);
         //init the array list from this data source
@@ -66,45 +66,36 @@ public class TimelineActvity extends AppCompatActivity {
         rvTweets.setLayoutManager(new LinearLayoutManager(this));
         rvTweets.setAdapter(tweetAdapter);
         populateTimeline();
-
     }
-
     public void fetchTimelineAsync(int page) {
         // Send the network request to fetch the updated data
         // `client` here is an instance of Android Async HTTP
         // getHomeTimeline is an example endpoint.
         client.getHomeTimeline(new JsonHttpResponseHandler() {
-            public void onSuccess(JSONArray json) {
-                // Remember to CLEAR OUT old items before appending in the new ones
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 tweetAdapter.clear();
-                ArrayList<Tweet> refresh= new ArrayList<>();
+                //ArrayList<Tweet> refresh= new ArrayList<>();
                 // ...the data has come back, add new items to your adapter...
-
-                    for(int i = 0; i < 25; i++){
-                        try{
-                        Tweet tweet = Tweet.fromJSON(json.getJSONObject(i));
-                        refresh.add(tweet);}
-                        catch(JSONException e){
-                            Log.e("json", "asas");
+                for(int i = 0; i < response.length(); i++){
+                    try{
+                        Tweet tweet = Tweet.fromJSON(response.getJSONObject(i));
+                        tweets.add(tweet);
+                        tweetAdapter.notifyItemInserted(tweets.size() - 1);
                     }
-                    tweetAdapter.addAll(refresh);
+                    catch(JSONException e){
+                        Log.e("json", "asas");
+                    }
                 }
                 swipeContainer.setRefreshing(false);
-                    tweetAdapter.addAll(refresh);
-                }
-            public void onFailure(Throwable e) {
-                Log.d("DEBUG", "Fetch timeline error: " + e.toString());
             }
 
-
-                // Now we call setRefreshing(false) to signal refresh has finished
-
-
-
-
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+            }
         });
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

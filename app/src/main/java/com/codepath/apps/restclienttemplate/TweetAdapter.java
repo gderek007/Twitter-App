@@ -20,7 +20,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
     public TweetAdapter(List<Tweet> tweets){
         mTweets = tweets;
     }
-    // for each row, inflate the layout and cache references into View hoolder
+    // for each row, inflate the layout and cache references into View hohjgiflgtrljdvkerhdkcnirjvcvfebnrlder
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         context = parent.getContext();

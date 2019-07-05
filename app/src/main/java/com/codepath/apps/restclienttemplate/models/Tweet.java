@@ -23,7 +23,7 @@ public class Tweet {
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJSON(jsonObject.getJSONObject("user"));
         try {
-            tweet.mediaURL = jsonObject.getJSONObject("entities").getJSONObject("media").getString("media_url_https");
+            tweet.mediaURL = jsonObject.getJSONObject("entities").getJSONArray("media").getJSONObject(0).getString("media_url");
         }
         catch(JSONException e){
             Log.e("JSON","no media url");
