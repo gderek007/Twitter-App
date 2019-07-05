@@ -3,8 +3,6 @@ package com.codepath.apps.restclienttemplate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -34,26 +32,26 @@ public class ComposeActivity<button> extends AppCompatActivity  {
         compose = findViewById(R.id.ivCompose);
         charView = findViewById(R.id.charView);
         client=TwitterApp.getRestClient(this);
-        // character view
-        charView.addTextChangedListener(new TextWatcher()
-        {
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {int length = s.length();
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int aft)
-            {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s)
-            {
-                // this will show characters remaining
-                charView.setText(280 - s.toString().length() + "/280");
-            }
-        });
+        //  TODO--character view
+//        charView.addTextChangedListener(new TextWatcher()
+//        {
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count)
+//            {int length = s.length();
+//            }
+//
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int aft)
+//            {
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s)
+//            {
+//                // this will show characters remaining
+//                charView.setText(280 - s.toString().length() + "/280");
+//            }
+//        });
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button

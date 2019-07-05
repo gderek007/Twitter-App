@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/ivProfileImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/black" />
-
     <TextView
         android:id="@+id/tvUserName"
         android:layout_width="wrap_content"
@@ -40,43 +32,71 @@
         app:layout_constraintTop_toBottomOf="@+id/tvUserName"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/black" />
+
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ignorebtn"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBody"
+        app:layout_constraintTop_toBottomOf="@+id/LoadedImage"
         app:srcCompat="@android:drawable/ic_delete" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/rtbtn"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/tvBody"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ignorebtn"
+        app:layout_constraintTop_toBottomOf="@+id/LoadedImage"
         app:srcCompat="@android:drawable/stat_notify_sync" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/likebtn"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rtbtn"
+        app:layout_constraintTop_toBottomOf="@+id/LoadedImage"
         app:srcCompat="@android:drawable/btn_star_big_off" />
 
     <ImageView
         android:id="@+id/LoadedImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/tvBody"
         app:srcCompat="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/likebtn"
+        app:layout_constraintTop_toBottomOf="@+id/LoadedImage"
+        app:srcCompat="@android:drawable/ic_menu_share" />
 
 </android.support.constraint.ConstraintLayout>
