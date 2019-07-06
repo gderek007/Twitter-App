@@ -45,8 +45,7 @@ The following **bonus** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
-I added an extra button to ignore a person but did not get around the logic of actually ignoring a person.
+* I added an extra button to ignore a person but did not get around the logic of actually ignoring a person.
 
 ## Video Walkthrough
 
