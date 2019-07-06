@@ -5,8 +5,11 @@ INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.x
 INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
 INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:2:1-46:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:2:1-11:12
+MERGED from [jp.wasabeef:glide-transformations:3.3.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/84649b7b777fee04e546d3855d0adc4f/AndroidManifest.xml:2:1-11:12
+MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/81419a79c740cd8e80bca0dc6c12e56d/AndroidManifest.xml:2:1-12:12
 MERGED from [com.codepath.libraries:android-oauth-handler:1.4.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/a68c52b2d842e174dea594cf791ba10f/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/835f9a0eadae4909880c523a4f625aff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d8eaa36d20155da5d72e708c1d93449/AndroidManifest.xml:2:1-13:12
 MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d1e8e35a6e99e1d968c9d1f340cd0e3/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/6aa8f32bdf680746a01321cb0be42bd7/AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/f540d88abc1c8caa2c98d7f8e84ddbbc/AndroidManifest.xml:17:1-22:12
@@ -33,6 +36,7 @@ MERGED from [android.arch.persistence:db:1.1.1] /Users/derekgar/.gradle/caches/t
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/f095402a755bf8eb0d2b5a1b68392609/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/f049685780b7912a3a34ef3d639a235f/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/57de88758ffd23c08cee58a80a0bc16a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1b618e387eee710b75cc8849bcceea12/AndroidManifest.xml:2:1-11:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1364f6556000c8e90d8fc6c22e85e10e/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:documentfile:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/ddba458991f8724d936df58b2539bd1b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/aff8c6535f194ed868adad1c70569c56/AndroidManifest.xml:17:1-22:12
@@ -68,12 +72,16 @@ application
 ADDED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml:10:5-44:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d8eaa36d20155da5d72e708c1d93449/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d8eaa36d20155da5d72e708c1d93449/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/6aa8f32bdf680746a01321cb0be42bd7/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/6aa8f32bdf680746a01321cb0be42bd7/AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:support-compat:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/901bdd48b7b76dcce50340f482644f22/AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/901bdd48b7b76dcce50340f482644f22/AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/caf177e13bfbfbbe83b1f74d2fb349ff/AndroidManifest.xml:22:5-23:19
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/caf177e13bfbfbbe83b1f74d2fb349ff/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1b618e387eee710b75cc8849bcceea12/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1b618e387eee710b75cc8849bcceea12/AndroidManifest.xml:9:5-20
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/901bdd48b7b76dcce50340f482644f22/AndroidManifest.xml:22:18-91
 	android:label
@@ -140,10 +148,16 @@ INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.x
 INJECTED from /Users/derekgar/Desktop/Twitter-App/app/src/main/AndroidManifest.xml
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/dc29699f54b33a84688c4b0521637e89/AndroidManifest.xml:5:5-7:41
+MERGED from [jp.wasabeef:glide-transformations:3.3.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/84649b7b777fee04e546d3855d0adc4f/AndroidManifest.xml:7:5-9:41
+MERGED from [jp.wasabeef:glide-transformations:3.3.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/84649b7b777fee04e546d3855d0adc4f/AndroidManifest.xml:7:5-9:41
+MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/81419a79c740cd8e80bca0dc6c12e56d/AndroidManifest.xml:8:5-10:41
+MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/81419a79c740cd8e80bca0dc6c12e56d/AndroidManifest.xml:8:5-10:41
 MERGED from [com.codepath.libraries:android-oauth-handler:1.4.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/a68c52b2d842e174dea594cf791ba10f/AndroidManifest.xml:7:5-9:41
 MERGED from [com.codepath.libraries:android-oauth-handler:1.4.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/a68c52b2d842e174dea594cf791ba10f/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/835f9a0eadae4909880c523a4f625aff/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/835f9a0eadae4909880c523a4f625aff/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d8eaa36d20155da5d72e708c1d93449/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d8eaa36d20155da5d72e708c1d93449/AndroidManifest.xml:7:5-9:41
 MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d1e8e35a6e99e1d968c9d1f340cd0e3/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1d1e8e35a6e99e1d968c9d1f340cd0e3/AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/6aa8f32bdf680746a01321cb0be42bd7/AndroidManifest.xml:7:5-9:41
@@ -196,6 +210,8 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/derekgar/.gradle
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/f049685780b7912a3a34ef3d639a235f/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/57de88758ffd23c08cee58a80a0bc16a/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/57de88758ffd23c08cee58a80a0bc16a/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1b618e387eee710b75cc8849bcceea12/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1b618e387eee710b75cc8849bcceea12/AndroidManifest.xml:5:5-7:41
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1364f6556000c8e90d8fc6c22e85e10e/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/1364f6556000c8e90d8fc6c22e85e10e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:documentfile:28.0.0] /Users/derekgar/.gradle/caches/transforms-2/files-2.1/ddba458991f8724d936df58b2539bd1b/AndroidManifest.xml:20:5-44

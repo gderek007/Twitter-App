@@ -31,6 +31,8 @@ android {
 }
 
 dependencies {
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'org.parceler:parceler-api:1.1.12'
     annotationProcessor 'org.parceler:parceler:1.1.12'

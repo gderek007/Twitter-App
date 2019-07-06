@@ -718,7 +718,6 @@ id fill_horizontal
 id fill_vertical
 id forever
 id group_divider
-id holder
 id home
 id homeAsUp
 id icon

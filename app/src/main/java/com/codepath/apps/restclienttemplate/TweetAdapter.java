@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import java.text.ParseException;
@@ -50,7 +51,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
         holder.tvUsername.setText(tweet.user.name);
         holder.tvBody.setText(tweet.body);
         holder.created.setText(getRelativeTimeAgo(tweet.createdAt));
-        Glide.with(context).load(tweet.user.profileImageUrl).into(holder.ivProfileImage);
+        Glide.with(context).load(tweet.user.profileImageUrl).apply(RequestOptions.circleCropTransform()).into(holder.ivProfileImage);
         if (tweet.mediaURL != null) {
             Glide.with(context).load(tweet.mediaURL).into(holder.LoadedImage);
         }
@@ -81,7 +82,6 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         return relativeDate;
     }
     @Override

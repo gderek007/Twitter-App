@@ -27,15 +27,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/charView"
-        android:layout_width="25dp"
-        android:layout_height="16dp"
+        android:layout_width="92dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="text"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSend"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivCompose" />
 
 </android.support.constraint.ConstraintLayout>

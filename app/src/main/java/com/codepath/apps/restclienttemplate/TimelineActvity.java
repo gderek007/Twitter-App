@@ -1,6 +1,8 @@
 package com.codepath.apps.restclienttemplate;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -24,6 +26,8 @@ import java.util.ArrayList;
 import cz.msebera.android.httpclient.Header;
 
 public class TimelineActvity extends AppCompatActivity {
+//    ActionBar actionBar = getActionBar();
+//    actionBar.setBackgroundDrawable(new ColorDrawable(Color.RED));
     private TwitterClient client;
     private SwipeRefreshLayout swipeContainer;
 
@@ -35,6 +39,7 @@ public class TimelineActvity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00acee")));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
         client = TwitterApp.getRestClient(this);

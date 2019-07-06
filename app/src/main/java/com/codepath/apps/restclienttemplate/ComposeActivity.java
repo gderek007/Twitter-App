@@ -3,6 +3,8 @@ package com.codepath.apps.restclienttemplate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +25,7 @@ public class ComposeActivity<button> extends AppCompatActivity  {
     Button button;
     TextView compose;
     TwitterClient client;
-    EditText charView;
+    TextView charView;
     EditText edits;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,35 +33,38 @@ public class ComposeActivity<button> extends AppCompatActivity  {
         button = findViewById(R.id.btnSend);
         compose = findViewById(R.id.ivCompose);
         charView = findViewById(R.id.charView);
-        client=TwitterApp.getRestClient(this);
+        client = TwitterApp.getRestClient(this);
         //  TODO--character view
-//        charView.addTextChangedListener(new TextWatcher()
-//        {
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count)
-//            {int length = s.length();
-//            }
-//
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int aft)
-//            {
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s)
-//            {
-//                // this will show characters remaining
-//                charView.setText(280 - s.toString().length() + "/280");
-//            }
-//        });
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                sendTweet();
-               // onSubmit();
+
+        compose.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                int length = compose.length();
+                String convert = String.valueOf(length);
+                charView.setText(convert + "/280");
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
-    }
+        button.setOnClickListener(new View.OnClickListener()
+
+            {
+                public void onClick (View v){
+                // Code here executes on main thread after user presses button
+                sendTweet();
+                // onSubmit();
+            }
+            });
+        }
+
     public void onSubmit() {
         // closes the activity and returns to first screen
         this.finish();
